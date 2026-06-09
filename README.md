@@ -28,6 +28,25 @@ Create, update, and manage WordPress posts, pages, and custom post types using W
 - Makes the minimum requested change only — no unsolicited edits
 - Asks which sub-site to target for multisite create tasks
 
+### [`wordpress-optimization`](./wordpress-optimization/)
+
+WordPress performance optimization — speed testing, caching, image optimization, JS/CSS delivery, database tuning, and Core Web Vitals.
+
+**What it does:**
+
+- Achieves 90+ mobile PageSpeed scores with a repeatable methodology
+- Covers caching (WP Rocket, Flyingpress), image optimization, JS delay, and unused CSS removal
+- Addresses page builders (Elementor, Divi, WPBakery, Beaver, Bricks) and theme-specific tuning
+- Includes TTFB optimization, database cleanup, and security hardening
+- Targets Core Web Vitals (LCP, CLS, INP) using Debug Bear for diagnosis and PSI for verification
+
+**Guardrails built in:**
+
+- Always tests mobile scores only — desktop is explicitly excluded
+- Recommends averaging 3 tests to account for inter-test variance
+- Uses Debug Bear for diagnosis, PageSpeed Insights for verification — never optimizes blindly
+- Prioritizes free/built-in solutions before recommending paid plugins
+
 ---
 
 ## Installation
