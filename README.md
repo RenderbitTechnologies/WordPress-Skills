@@ -8,7 +8,7 @@ These skills are designed to be installed in [Claude.ai](https://claude.ai) and 
 
 ## Skills
 
-### [`skills/wp-cli-posts`](./skills/wp-cli-posts/)
+### [`wp-cli-posts`](./wp-cli-posts/)
 
 Create, update, and manage WordPress posts, pages, and custom post types using WP-CLI over SSH.
 
@@ -32,7 +32,7 @@ Create, update, and manage WordPress posts, pages, and custom post types using W
 
 ## Installation
 
-1. Download the `.skill` file for the skill you want from the [Releases](../../releases) page (or directly from the `skills/` directory).
+1. Download the `.skill` file for the skill you want from the [Releases](../../releases) page (or directly from the skill's directory in this repo).
 2. In Claude.ai, go to **Settings → Skills**.
 3. Upload the `.skill` file.
 4. Claude will now automatically use the skill when relevant.
@@ -72,13 +72,12 @@ If SSH isn't configured, the skill will detect this and walk you through the set
 Skills follow a standard structure:
 
 ```
-skills/
-└── skill-name/
-    ├── SKILL.md          # Required — skill instructions and metadata
-    └── references/       # Optional — additional reference docs
+skill-name/
+├── SKILL.md          # Required — skill instructions and metadata
+└── references/       # Optional — additional reference docs
 ```
 
-To add a new skill, open a PR with your `SKILL.md` under an appropriate subdirectory in `skills/`. Please include a description of what the skill does and when it should trigger in the YAML frontmatter.
+To add a new skill, open a PR with your `SKILL.md` in a new directory at the project root. Please include a description of what the skill does and when it should trigger in the YAML frontmatter.
 
 ---
 
