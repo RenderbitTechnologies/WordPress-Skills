@@ -1,0 +1,45 @@
+name: Package and Release Skills
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package each skill into .skill archive
+        run: |
+          mkdir -p dist
+          packaged=0
+          for dir in */; do
+            if [[ -f "${dir}SKILL.md" ]]; then
+              skill_name=$(basename "$dir")
+              echo "::group::Packaging $skill_name"
+              (cd "$dir" && zip -r "../dist/${skill_name}.skill" .)
+              echo "Packaged: dist/${skill_name}.skill ($(stat -c%s "dist/${skill_name}.skill") bytes)"
+              echo "::endgroup::"
+              packaged=$((packaged + 1))
+            fi
+          done
+          echo "Packaged $packaged skill(s)"
+          if [[ $packaged -eq 0 ]]; then
+            echo "::warning::No skills found (no directories with SKILL.md)"
+            exit 1
+          fi
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --title "${{ github.ref_name }}" \
+            --generate-notes \
+            dist/*.skill
