@@ -4,8 +4,6 @@ A collection of AI agent skills for managing WordPress sites via WP-CLI over SSH
 
 These skills are designed to be installed in [Claude.ai](https://claude.ai) or other AI agents and give agents structured, opinionated workflows for common WordPress content management tasks — without needing a plugin, REST API integration, or admin panel access.
 
----
-
 ## Skills
 
 ### [`wp-cli-posts`](./wp-cli-posts/)
@@ -47,16 +45,12 @@ WordPress performance optimization — speed testing, caching, image optimizatio
 - Uses Debug Bear for diagnosis, PageSpeed Insights for verification — never optimizes blindly
 - Prioritizes free/built-in solutions before recommending paid plugins
 
----
-
 ## Installation
 
 1. Download the `.skill` file for the skill you want from the [Releases](../../releases) page (or directly from the skill's directory in this repo).
 2. In Claude.ai, go to **Settings → Skills**.
 3. Upload the `.skill` file.
 4. Claude will now automatically use the skill when relevant.
-
----
 
 ## Prerequisites
 
@@ -84,8 +78,6 @@ For AWS Elastic Beanstalk with a key pair:
 
 If SSH isn't configured, the skill will detect this and walk you through the setup before proceeding.
 
----
-
 ## Contributing
 
 Skills follow a standard structure:
@@ -98,8 +90,10 @@ skill-name/
 
 To add a new skill, open a PR with your `SKILL.md` in a new directory at the project root. Please include a description of what the skill does and when it should trigger in the YAML frontmatter.
 
----
-
 ## Maintained by
 
 [Renderbit Technologies](https://github.com/RenderbitTechnologies)
+
+## License
+
+MIT
