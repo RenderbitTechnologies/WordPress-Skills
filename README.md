@@ -1,8 +1,8 @@
 # WordPress Skills
 
-A collection of Claude AI skills for managing WordPress sites via WP-CLI over SSH.
+A collection of AI agent skills for managing WordPress sites via WP-CLI over SSH.
 
-These skills are designed to be installed in [Claude.ai](https://claude.ai) and give Claude structured, opinionated workflows for common WordPress content management tasks — without needing a plugin, REST API integration, or admin panel access.
+These skills are designed to be installed in [Claude.ai](https://claude.ai)/other AI agents and give agents structured, opinionated workflows for common WordPress content management tasks — without needing a plugin, REST API integration, or admin panel access.
 
 ---
 
@@ -102,4 +102,4 @@ To add a new skill, open a PR with your `SKILL.md` in a new directory at the pro
 
 ## Maintained by
 
-[UEM Group Websites](https://github.com/UEM-Group-Websites)
+[Renderbit Technologies](https://github.com/RenderbitTechnologies)
